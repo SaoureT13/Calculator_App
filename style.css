@@ -100,7 +100,7 @@ body {
   border-radius: 10px;
   outline: none;
   border: none;
-  /* pointer-events: none; */
+  pointer-events: none;
   z-index: 1;
 }
 .container .calc-section .display {
