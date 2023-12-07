@@ -1,0 +1,182 @@
+:root{
+    /*Thème 1*/
+    --Very_dark_desaturated_blue: hsl(222, 26%, 31%);
+    --Very_dark_desaturated_bluee: hsl(223, 31%, 20%);
+    --Very_dark_desaturated_blueee: hsl(224, 36%, 15%);
+    --Desaturated_dark_blue: hsl(225, 21%, 49%);
+    --Desaturated_dark_bluee: hsl(224, 28%, 35%);
+    --Red: hsl(6, 63%, 50%);
+    --Dark_red: hsl(6, 70%, 34%);
+    --Light_grayish_orange: hsl(30, 25%, 89%);
+    --Grayish_orange: hsl(28, 16%, 65%);
+    --Very_dark_grayish_blue: hsl(221, 14%, 31%);
+    --White: hsl(0, 0%, 100%);
+    
+}
+* {
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+p,
+h3 {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  background-color: var(--Very_dark_desaturated_blue);
+  color: var(--White);
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 100%;
+  padding: 30px 20px;
+}
+.container .calc-main {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-columns: 50px;
+  gap: 20px;
+  padding: 15px;
+  background-color: var(--Very_dark_desaturated_bluee);
+  border-radius: 10px;
+  margin-top: 20px;
+}
+.container .calc-main button {
+  font-size: 2em;
+  font-weight: bold;
+  height: 65px;
+  background-color: var(--Light_grayish_orange);
+  color: var(--Very_dark_grayish_blue);
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0px 5px 0px 0px var(--Grayish_orange);
+  cursor: pointer;
+  transition: 0.3s;
+}
+.container .calc-main button:hover,
+.container .calc-main button:nth-child(17):hover,
+.container .calc-main button:nth-child(18):hover,
+.container .calc-main button:nth-child(4):hover {
+  transform: translateY(5px);
+  box-shadow: none;
+}
+.container .calc-main button:nth-child(17) {
+  grid-column: 1/3;
+}
+.container .calc-main button:nth-child(17),
+.container .calc-main button:nth-child(4) {
+  background-color: var(--Desaturated_dark_blue);
+  box-shadow: 0px 5px 0px 0px var(--Desaturated_dark_bluee);
+  font-size: 1.4em;
+  color: var(--White);
+  text-transform: uppercase;
+}
+.container .calc-main button:nth-child(18) {
+  grid-column: 3/5;
+  font-size: 1.2em;
+  color: var(--White);
+  background-color: var(--Red);
+  box-shadow: 0px 5px 0px 0px var(--Dark_red);
+}
+.container .calc-section{
+  position: relative;
+}
+.container .calc-section .historical{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100px;
+  height: 40px;
+  background-color: var(--Very_dark_desaturated_blueee);
+  color: var(--White);
+  font-weight: bold;
+  text-align: right;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  /* pointer-events: none; */
+  z-index: 1;
+}
+.container .calc-section .display {
+  width: 100%;
+  height: 100px;
+  background-color: var(--Very_dark_desaturated_blueee);
+  outline: none;
+  border: none;
+  font-size: 2.5em;
+  font-weight: bold;
+  color: var(--White);
+  text-align: right;
+  border-radius: 10px;
+  pointer-events: none;
+  z-index: 0;
+}
+.container .calc-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+.container .calc-header .logo {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+.container .calc-header .hero-theme {
+  display: flex;
+  align-items: center;
+}
+.container .calc-header .hero-theme h3 {
+  margin-right: 20px;
+  font-size: 1em;
+}
+.container .calc-header .hero-theme .contain-switch {
+  display: flex;
+  flex-direction: column;
+}
+.container .calc-header .hero-theme .contain-switch .theme-number {
+  display: flex;
+  justify-content: space-between;
+  width: 90px;
+}
+.container .calc-header .hero-theme .contain-switch .theme-number p {
+  font-size: 0.8em;
+  cursor: pointer;
+  padding: 5px 12px;
+  font-weight: bold;
+}
+.container .calc-header .hero-theme .contain-switch .container-switcher {
+  width: 90px;
+  height: 30px;
+  padding: 5px;
+  background-color: var(--Very_dark_desaturated_bluee);
+  border-radius: 20px;
+  cursor: pointer;
+}
+.container .calc-header .hero-theme .contain-switch .container-switcher .switch-roller {
+  transform: translateX(0);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: var(--Red);
+  cursor: pointer;
+  transition: .3s;
+}
+
+@media only screen and (min-width: 780px) {
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  .container {
+    width: 600px;
+  }
+}
+
